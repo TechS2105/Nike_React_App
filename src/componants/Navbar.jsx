@@ -4,7 +4,7 @@ import Logo from './Logo';
 import Menu from './MenuList';
 import Shop from './Shop';
 
-let image = '../../public/images/icons8-nike-250.png';
+let image = 'images/icons8-nike-250.png';
 
 function Navbar() {
     
