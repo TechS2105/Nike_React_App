@@ -1,0 +1,19 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.iconcontainer{
+
+    width: 50%;
+    height: 100%;
+
+}
+
+.iconcontainer > ul li{
+
+    font-size: 20px;
+
+}
