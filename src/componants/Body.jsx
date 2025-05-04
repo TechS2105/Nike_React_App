@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import '../../public/styles/Body.css';
 
-let firstImage = "../../public/images/usama-akram-kP6knT7tjn4-unsplash-removebg-preview.png";
-let secondImage = "../../public/images/AIRZOOMPEGASUS41CM-removebg-preview.png";
-let thirdImage = "../../public/images/GIANNISIMMORTALITY4EP-removebg-preview.png";
-let fourthImage = "../../public/images/NIKEFREE2025-removebg-preview.png";
+let firstImage = "images/usama-akram-kP6knT7tjn4-unsplash-removebg-preview.png";
+let secondImage = "images/AIRZOOMPEGASUS41CM-removebg-preview.png";
+let thirdImage = "images/GIANNISIMMORTALITY4EP-removebg-preview.png";
+let fourthImage = "images/NIKEFREE2025-removebg-preview.png";
 
 function Body() {
 
