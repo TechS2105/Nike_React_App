@@ -19,13 +19,6 @@ function Body() {
 
     });
 
-    const [changeImgSize, setImageSize] = useState({
-
-        width: "400px",
-        height: "400px",
-
-    });
-
     const [removeOverlay, setOverlay] = useState({
 
         backgroundImage: "linear-gradient(360deg, #000000b2, #ffffff00, #000000b2)",
@@ -33,6 +26,25 @@ function Body() {
         width: "100%"
 
     });
+  
+    const [loadFirstImage, setLoadFirstImage] = useState({
+
+      transform: "scale(0) translateY(-1000px)",
+      filter: "blur(30px)",
+
+    });
+  
+    function loadFirstImageFun() {
+    
+      setLoadFirstImage({
+
+        transform: "scale(1) rotate(-50deg) translateY(0px)",
+        transition: "all 0.8s ease",
+        filter: "blur(0px)",
+
+      });
+
+    }
 
     function changeWidth() {
         
@@ -49,20 +61,17 @@ function Body() {
             transition: "all 0.8s ease"
 
         });
-
-        setImageSize({
-
-            width: "600px",
-            height: "600px",
-            objectFit: "cover",
-            position: "absolute",
-            top: "40px",
-            left: "-20px",
-            transform: "rotate(0deg)",
-            transition: "all 0.8s ease",
-            filter: "drop-shadow(10px 10px 5px black)"
-            
-
+      
+        setLoadFirstImage({
+          width: "600px",
+          height: "600px",
+          objectFit: "cover",
+          position: "absolute",
+          top: "40px",
+          left: "-20px",
+          transform: "rotate(0deg)",
+          transition: "all 0.8s ease",
+          filter: "drop-shadow(10px 10px 5px black)",
         });
 
         setOverlay({
@@ -93,8 +102,7 @@ function Body() {
         transition: "all 0.8s ease",
       });
 
-      setchangeImgSize2({
-
+      setLoadSecondImage({
         width: "400px",
         height: "400px",
         transform: "rotate(-50deg)",
@@ -102,7 +110,6 @@ function Body() {
         position: "absolute",
         top: "120px",
         left: "-80px",
-
       });
 
       setimageContainer3({
@@ -126,15 +133,13 @@ function Body() {
         transition: "all 0.8s ease"
       });
 
-      setchangeImgSize3({
-
+      setLoadThirdImage({
         height: "400px",
         width: "400px",
         transition: "all 0.8s ease",
         position: "absolute",
         left: "-80px",
         top: "120px",
-
       });
 
       setimageContainer4({
@@ -150,15 +155,14 @@ function Body() {
 
       });
 
-      setchangeImgSize4({
 
+      setLoadFourthImage({
         width: "400px",
         height: "400px",
         transition: "all 0.8s ease",
         position: "absolute",
         left: "-80px",
         top: "120px",
-
       });
 
     }
@@ -181,13 +185,19 @@ function Body() {
         width: "100%"
 
     });
-
-    const [changeImgSize2, setchangeImgSize2] = useState({
-
-        width: "400px",
-        height: "400px",
-
+  
+    const [loadSecondImage, setLoadSecondImage] = useState({
+      transform: "scale(0) translateY(1000px)",
+      filter: "blur(30px)",
     });
+
+    function loadSecondImageFun() {
+      setLoadSecondImage({
+        transform: "scale(1) rotate(-50deg) translateY(0px)",
+        transition: "all 0.8s ease 0.5s",
+        filter: "blur(0px)",
+      });
+    }
 
     function changeWidth2() {
         
@@ -210,17 +220,15 @@ function Body() {
             transition: "all 0.8s ease",
 
         });
-
-        setImageSize({
-
-            width: "400px",
-            height: "400px",
-            transform: "rotate(-50deg)",
-            transition: "all 0.8s ease",
-            position: "absolute",
-            left: "-80px",
-            top: "120px",
-
+      
+        setLoadFirstImage({
+          width: "400px",
+          height: "400px",
+          transform: "rotate(-50deg)",
+          transition: "all 0.8s ease",
+          position: "absolute",
+          left: "-80px",
+          top: "120px",
         });
 
         setOverlay({
@@ -241,9 +249,8 @@ function Body() {
           backgroundImage: "none",
           transition: "all 0.8s ease",
         });
-
-        setchangeImgSize2({
-
+      
+        setLoadSecondImage({
           transform: "rotate(0deg)",
           transition: "all 0.8s ease",
           position: "absolute",
@@ -251,8 +258,7 @@ function Body() {
           left: "-20px",
           width: "600px",
           height: "600px",
-          filter: "drop-shadow(10px 10px 5px black)"
-
+          filter: "drop-shadow(10px 10px 5px black)",
         });
       
       setimageContainer3({
@@ -276,15 +282,14 @@ function Body() {
         transition: "all 0.8s ease",
       });
 
-      setchangeImgSize3({
 
+      setLoadThirdImage({
         width: "400px",
         height: "400px",
-        transition: 'all 0.8s ease',
+        transition: "all 0.8s ease",
         position: "absolute",
         top: "120px",
-        left: "-80px"
-        
+        left: "-80px",
       });
 
       setimageContainer4({
@@ -300,15 +305,13 @@ function Body() {
 
       });
 
-      setchangeImgSize4({
-
+      setLoadFourthImage({
         width: "400px",
         height: "400px",
         transition: "all 0.8s ease",
         position: "absolute",
         top: "120px",
         left: "-80px",
-
       });
 
     }
@@ -330,12 +333,24 @@ function Body() {
       width: "100%"
     });
   
-    const [changeImgSize3, setchangeImgSize3] = useState({
+    const [loadThirdImage, setLoadThirdImage] = useState({
     
-      width: "400px",
-      height: "400px",
+      transform: "scale(0) translateY(-1000px)",
+      filter: "blur(30px)"
 
-    });
+    }); 
+  
+    function loadThirdImageFun() {
+    
+      setLoadThirdImage({
+
+        transform: "scale(1) rotate(-50deg) translateY(0px)",
+        filter: "blur(0px)",
+        transition: "all 0.8s ease 1s"
+
+      });
+
+    }
 
     function changeWidth3() {
     
@@ -359,8 +374,7 @@ function Body() {
 
       });
 
-      setchangeImgSize3({
-
+      setLoadThirdImage({
         width: "600px",
         height: "600px",
         transform: "rotate(0deg)",
@@ -369,7 +383,6 @@ function Body() {
         top: "50px",
         left: "-30px",
         filter: "drop-shadow(10px 10px 5px black)",
-
       });
 
       setImageContainerWidth({
@@ -393,15 +406,13 @@ function Body() {
         transition: "all 0.8s ease"
       });
 
-      setchangeImgSize2({
-
+      setLoadSecondImage({
         width: "400px",
         height: "400px",
         transition: "all 0.8s ease",
         position: "absolute",
         top: "120px",
         left: "-80px",
-
       });
 
       setWidth({
@@ -424,15 +435,13 @@ function Body() {
         transition: "all 0.8s ease"
       });
 
-      setImageSize({
-
+      setLoadFirstImage({
         width: "400px",
         height: "400px",
         transition: "all 0.8s ease",
         position: "absolute",
         top: "120px",
         left: "-80px",
-
       });
 
       setimageContainer4({
@@ -448,15 +457,14 @@ function Body() {
 
       });
 
-      setchangeImgSize4({
 
+      setLoadFourthImage({
         width: "400px",
         height: "400px",
         transition: "all 0.8s ease",
         position: "absolute",
         top: "120px",
         left: "-80px",
-
       });
 
       setremoveOverlay4({
@@ -480,18 +488,30 @@ function Body() {
 
   });
 
-  const [changeImgSize4, setchangeImgSize4] = useState({
-
-    width: "400px",
-    height: "400px",
-
-  });
-
   const [removeOverlay4, setremoveOverlay4] = useState({
     backgroundImage: "linear-gradient(360deg, #000000b2, #ffffff00, #000000b2)",
     height: "100%",
     width: "100%",
   });
+
+  const [loadFourthImage, setLoadFourthImage] = useState({
+
+    transform: "scale(0) translateY(1000px)",
+    filter: "blur(30px)",
+
+  });
+
+  function loadFourthImageFun() {
+    
+    setLoadFourthImage({
+
+      transform: "scale(1) rotate(-50deg) translateY(0px)",
+      filter: "blur(0px)",
+      transition: "all 0.8s ease 1.5s",
+
+    });
+
+  }
   
   function changeWidth4() {
     
@@ -519,15 +539,13 @@ function Body() {
       transition: "all 0.8s ease",
     });
 
-    setchangeImgSize3({
-
+    setLoadThirdImage({
       width: "400px",
       height: "400px",
       transition: "all 0.8s ease",
       position: "absolute",
       top: "120px",
       left: "-80px",
-
     });
 
     setImageContainerWidth({
@@ -536,15 +554,13 @@ function Body() {
       backgroundColor: "#8b80f9",
     });
 
-    setchangeImgSize2({
-
+    setLoadSecondImage({
       width: "400px",
       height: "400px",
-      position: 'absolute',
+      position: "absolute",
       top: "120px",
       left: "-80px",
-      transition: "all 0.8s ease"
-
+      transition: "all 0.8s ease",
     });
 
     setFontSize2({
@@ -562,8 +578,7 @@ function Body() {
       transition: "all 0.8s ease"
     });
 
-    setchangeImgSize4({
-
+    setLoadFourthImage({
       width: "600px",
       height: "600px",
       transform: "rotate(0deg)",
@@ -572,7 +587,6 @@ function Body() {
       top: "50px",
       left: "-30px",
       filter: "drop-shadow(10px 10px 5px black)",
-
     });
 
     setremoveOverlay4({
@@ -596,15 +610,13 @@ function Body() {
 
     });
 
-    setImageSize({
-
+    setLoadFirstImage({
       width: "400px",
       height: "400px",
       transition: "all 0.8s ease",
       position: "absolute",
       top: "120px",
       left: "-80px",
-
     });
 
   }
@@ -616,8 +628,8 @@ function Body() {
             <div className="text">
               <h1 style={fontSize}> AIRMAX 95 </h1>
 
-              <div className="shoeimage">
-                <img src={firstImage} style={changeImgSize} />
+              <div className="shoeimage" onLoad={loadFirstImageFun}>
+                <img src={firstImage} style={(loadFirstImage)} />
               </div>
             </div>
           </div>
@@ -632,8 +644,11 @@ function Body() {
             <div className="text">
               <h1 style={fontSize2}> JIRMA 100 </h1>
 
-              <div className="shoeimage">
-                <img src={secondImage} style={changeImgSize2} />
+              <div className="shoeimage" onLoad={loadSecondImageFun}>
+                <img
+                  src={secondImage}
+                  style={(loadSecondImage)}
+                />
               </div>
             </div>
           </div>
@@ -648,8 +663,11 @@ function Body() {
             <div className="text">
               <h1 style={fontSize3}> ZPXRM 500 </h1>
 
-              <div className="shoeimage">
-                <img src={thirdImage} style={changeImgSize3} />
+              <div className="shoeimage" onLoad={loadThirdImageFun}>
+                <img
+                  src={thirdImage}
+                  style={(loadThirdImage)}
+                />
               </div>
             </div>
           </div>
@@ -664,8 +682,11 @@ function Body() {
             <div className="text">
               <h1 style={fontSize4}> RTMZP 80 </h1>
 
-              <div className="shoeimage">
-                <img src={fourthImage} style={changeImgSize4} />
+              <div className="shoeimage" onLoad={loadFourthImageFun}>
+                <img
+                  src={fourthImage}
+                  style={(loadFourthImage)}
+                />
               </div>
             </div>
           </div>
